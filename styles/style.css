@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Manrope";
+
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+#top-bar {
+    height: 2.5rem;
+}
+#hero {
+    width: 100%;
+    height: calc(100vh - 110px);
+    background: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) top center;
+    background-size: cover;
+    position: relative;
+}
+#hero .btn-get-started {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 10px 28px;
+    transition: 0.5s;
+    border: 2px solid #fff;
+    color: #fff;
+}
+#hero .btn-get-started:hover {
+    color: black;
+    background: #fff;
+}
+.btn {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 10px 28px;
+    transition: 0.5s;
+    border: 2px solid black;
+    color: black;
+}
+form .btn:hover{
+    color: #fff;
+    background: #111;
+}
+@media screen and (max-width:376px) {
+    #hero .btn-get-started {
+        margin-bottom: 2rem;
+        margin-left: 0!important;
+    }
+    .button-container{
+        flex-direction: column;
+    }
+    .button-container .btn{
+        margin-bottom: 2rem;
+    }
+    
+}

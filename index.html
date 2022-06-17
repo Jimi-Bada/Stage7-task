@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Manrope" rel="stylesheet">
+    <title>Dark Energy</title>
+</head>
+
+<body>
+    <section id="top-bar" class="d-flex align-items-center fs-6  bg-white border-bottom">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope-fill me-1 lh-0 text-primary"></i>
+                <a href="darkenergy:contact@example.com" class="lh-0 text-dark">info@example.com</a>
+                <i class="bi bi-phone-fill phone-icon ms-3 text-danger"></i>
+                +1 5589 55488
+            </div>
+            <div class="social-links d-none d-md-block">
+                <a href="#" class="twiiter d-inline-block py-1 px-2 lh-1 text-primary">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="#" class="facebook d-inline-block py-1 px-2 lh-1 text-primary">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="instagram d-inline-block py-1 px-2 lh-1 text-danger">
+                    <i class="bi bi-instagram "></i>
+                </a>
+                <a href="#" class="linkedin d-inline-block py-1 px-2 lh-1 text-secondary">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+    <section id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand text-primary fs-2 py-2 px-0 lh-1 text-uppercase text-decoration-none fw-normal text-secondary"
+                    href="#"><img src="img/logo.png" alt=""> DARK ENERGY</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html" target="_blank">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" target="_blank">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative aos-init aos-animate text-white" data-aos="fade-up"
+            data-aos-delay="500">
+            <h1>Welcome to Dark Energy</h1>
+            <h4>Post about your alien sightings and see others that have had similar experiences</h2>
+                <a href="#posts-page" class="btn-get-started scrollto">Get Started</a>
+                <a href="#posts" class="btn-get-started scrollto ms-4">See Other Posts</a>
+        </div>
+    </section>
+    <section id="posts-page" class="container-fluid d-md-flex flex-wrap justify-content-center bg-light">
+        <h1 class="m-4 p-3">Posts Page</h1>
+        <div class="row container-fluid d-md-flex justify-content-center">
+            <div class="col-md-5">
+                <form action="" id="post-form">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Post Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Enter your post title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Post Body</label>
+                        <textarea class="form-control" id="body" rows="3"></textarea>
+                        <button class="btn mt-3" type="submit">Post story</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+    <section id="posts" class="bg-light">
+        <div class="card-section mt-4 p-4">
+            <div class="container-fluid">
+                <div class="row" id="post-holder">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <p id="post-id" >1</p>
+                                <h1 id="post-title">Post title</h1>
+                                <p id="post-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illum quo
+                                    beatae atque ad cupiditate ducimus, porro sunt nihil quisquam.</p>
+                                <div class="d-flex justify-content-between btn-container">
+                                    <button class="btn btn-primary">Update</button>
+                                    <button class="btn btn-danger">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
