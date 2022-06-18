@@ -86,7 +86,7 @@ form .btn:hover{
     background: #111;
 }
 
-@media screen and (max-width:426px) {
+@media screen and (max-width:1025px) {
     #hero .btn-get-started {
         margin-bottom: 2rem;
         margin-left: 0!important;
