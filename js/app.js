@@ -17,7 +17,7 @@ function renderUI (arr) {
                         <h1 id="post-title"><strong>${post.title}</h1></strong>
                         <p id="post-body">${post.body}</p>
                         <div class="d-flex justify-content-between button-container">
-                            
+                            <button class="btn btn-success" id= "view-btn" onclick="fullPost(${post.id})">Full post</button>
                             <button class="btn btn-primary" onclick="updatePost(${post.id})">Update</button>
                             <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
                         </div>
@@ -29,6 +29,7 @@ function renderUI (arr) {
       });
       postwrapper.innerHTML = postHolder;
 }
+
 
 function getPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -77,7 +78,7 @@ function createPost(e){
                                 <h1 id="post-title"><strong>${post.title}</h1></strong>
                                 <p id="post-body">${post.body}</p>
                                 <div class="d-flex justify-content-between button-container">
-                                    
+                                    <button class="btn btn-success" id= "view-btn" onclick="fullPost(${post.id})">Full post</button>
                                     <button class="btn btn-primary" onclick="updatePost(${post.id})">Update</button>
                                     <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
                                 </div>
@@ -149,7 +150,17 @@ function deletePost(id) {
     })
     
 }
-
+function fullPost(id) {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data)
+            localStorage.setItem('viewedPost', JSON.stringify(data))
+            window.location.href = 'fullpost.html'
+            console.log(localStorage.getItem('viewedPost'))
+        });
+    
+}
 
 const scrollUp = document.querySelector('#back-to-top');
 
