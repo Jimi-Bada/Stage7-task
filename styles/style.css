@@ -3,8 +3,44 @@
     padding: 0;
     margin: 0;
     font-family: "Manrope";
+    scroll-behavior: smooth;
 
 }
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+#back-to-top:hover {
+    cursor: pointer;
+    background-color: #001233;
+}
+#back-to-top {
+    display: inline-block;
+    background-color: #222428;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#back-to-top i {
+    font-weight: 700;
+    font-size: 1.25em;
+    line-height: 40px;
+    color: #f2f2f2;
+}
+/* #back-to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(-555px);
+} */
 a{
     text-decoration: none;
     color: #fff;

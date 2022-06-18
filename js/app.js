@@ -151,19 +151,22 @@ function deletePost(id) {
 }
 
 
+const scrollUp = document.querySelector('#back-to-top');
 
-
-const backToTop = document.querySelector('#back-to-top');
-
-window.addEventListener("scroll",() => {
-    if (window.pageYOffset > 100 ) {
-        backToTop.classList.add('show');
-    } else {
-        backToTop.classList.remove('show');
+const refreshButtonVisibility = () => {
+    if( document.documentElement.scrollTop < 150) {
+        scrollUp.style.display = "none"
+    }else{
+        scrollUp.style.display = "block"
     }
-});
+}
+refreshButtonVisibility();
+scrollUp.addEventListener('click' , () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 
-backToTop.on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '100');
+});
+document,addEventListener('scroll', (e) => {
+   refreshButtonVisibility();
+
 });
