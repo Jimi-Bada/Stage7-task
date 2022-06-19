@@ -64,9 +64,7 @@ function createPost(e){
     })
     .then((response) => response.json())
     .then((data) => {
-        console.log(data)
         postBox.unshift(data);
-        console.log(postBox)
         let postHolder = ''
         postBox.forEach(post => {
             if(post.title !== "" && post.body !== ""){
@@ -96,7 +94,6 @@ function createPost(e){
 }    
 
 function updatePost(id){
-    console.log(id);
 
  fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
     method: 'PUT',
