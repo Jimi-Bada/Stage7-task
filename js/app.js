@@ -86,7 +86,7 @@ function createPost(e){
                 `
         }});   
          
-        postwrapper.innerHTML = postHolder;
+        postContainer.innerHTML = postHolder;
     
          
             
