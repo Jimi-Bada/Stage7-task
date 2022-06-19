@@ -1,4 +1,4 @@
-let postwrapper = document.querySelector('#post-holder');
+let postContainer = document.querySelector('#post-holder');
 let postForm = document.querySelector('#post-form');
 let title = document.querySelector('#title')
 let body = document.querySelector('#body')
@@ -6,7 +6,7 @@ let body = document.querySelector('#body')
 let postBox = [];
 
 
-function renderUI (arr) {
+function renderPage (arr) {
     let postHolder = '';
     arr.forEach(post => {
         postHolder += `
@@ -27,16 +27,16 @@ function renderUI (arr) {
         `
         
       });
-      postwrapper.innerHTML = postHolder;
+      postContainer.innerHTML = postHolder;
 }
 
 
 function getPosts() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://jsonplaceholder.typicode.com/posts/?_limit=20')
   .then((response) => response.json())
   .then((data) =>{
       postBox = data
-      renderUI(postBox)  
+      renderPage(postBox)  
   } )
       
 
@@ -112,10 +112,8 @@ function updatePost(id){
  })
     .then((response) => response.json())
     .then((data) => {
-        console.log(data)
         let postTitles = document.querySelectorAll('#post-title')
         let postBodies = document.querySelectorAll('#post-body')
-        console.log(postTitles)
         postTitles.forEach((postTitle, index) => {
             if(index + 1 === id){
                 if(data.title !== ""){
@@ -146,7 +144,7 @@ function deletePost(id) {
         console.log(data)
         postBox = postBox.filter(post => post.id !== id)
         console.log(postBox)
-        renderUI(postBox)
+        renderPage(postBox)
     })
     
 }
@@ -154,10 +152,9 @@ function fullPost(id) {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data)
             localStorage.setItem('viewedPost', JSON.stringify(data))
             window.location.href = 'fullpost.html'
-            console.log(localStorage.getItem('viewedPost'))
+        
         });
     
 }
